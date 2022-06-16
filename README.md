@@ -64,7 +64,7 @@ own image registry doesn't end up pulling this locally. Instead, the image is
 used directly from its source (`quay.io/fmissi/sample` in this case). More on
 that later.
 
-## Enabling deployments to reference image streams
+### Enabling deployments to reference image streams
 
 It's not possible to reference deployment from image streams out of the box.
 We'll enable this directly in the image stream, but it could be done to the
@@ -78,7 +78,7 @@ oc set image-lookup imagestream --list
 This will change the image stream yaml for us, enabling it to be referenced
 by other objects.
 
-## Deploy the sample app
+### Deploy the sample app
 
 ```
 oc apply -f appsample-manifests.yaml
@@ -101,7 +101,7 @@ oc get pod -l=app=app-sample -ojson|jq '.items[0].spec.containers[0].image'
 This manifest digest belongs to the `v0.1.0` tag of `quay.io/fmissi/sample`.
 The `latest` tag currently points to that same manifest.
 
-## Enabling the deployment trigger
+### Enabling the deployment trigger
 
 We want OpenShift to trigger a deployment whenever the manifest under the
 `latest` tag changes, so that when a new version of `quay.io/fmissi/sample` is
@@ -111,7 +111,7 @@ imported into the image stream, OpenShift can immediately deploy it for us.
 oc set triggers deploy/app-sample --from-image=app:latest -c app
 ```
 
-## Trigerring a deployment
+### Trigerring a deployment
 
 For OpenShift to trigger a deployment two things need to happen:
 1. the source image (`quay.io/fmissi/sample:latest`) needs to change
