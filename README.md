@@ -111,7 +111,7 @@ imported into the image stream, OpenShift can immediately deploy it for us.
 oc set triggers deploy/app-sample --from-image=app:latest -c app
 ```
 
-### Trigerring a deployment
+### Trigering a deployment
 
 For OpenShift to trigger a deployment two things need to happen:
 1. the source image (`quay.io/fmissi/sample:latest`) needs to change
