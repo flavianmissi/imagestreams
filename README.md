@@ -117,7 +117,7 @@ For OpenShift to trigger a deployment two things need to happen:
 1. the source image (`quay.io/fmissi/sample:latest`) needs to change
 2. the image stream needs to import the new source
 
-### 1. Changing the source image
+#### 1. Changing the source image
 
 This is where you'll need access to the repository where the sample app image
 is stored. You'll need to adapt the commands below so they work for you.
@@ -131,7 +131,7 @@ podman push quay.io/fmissi/sample:latest
 Version `v0.2.0` of the sample app prints a "Hello, World! 123" instead of
 "Hello, World!".
 
-### 2. Importing the new source image to the image stream
+#### 2. Importing the new source image to the image stream
 
 This step is the very same one we started with:
 
