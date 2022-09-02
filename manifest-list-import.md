@@ -28,7 +28,12 @@ EOF
 
 ```
 oc get images|grep quay.io/fmissi/ubuntu
+oc get is app
 ```
+
+You may compare these against the contents of quay.io/fmissi/ubuntu:latest's manifest list.
+There should be one image for the manifest list itself, and one image for each of the
+sub-manifests, totalling 7 images.
 
 ### 3. Cleaning up
 
