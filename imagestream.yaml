@@ -1,0 +1,17 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: app
+  namespace: myapp
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - from:
+      kind: DockerImage
+      name: quay.io/fmissi/ubuntu
+    importPolicy:
+      importMode: ManifestList
+    name: latest
+    referencePolicy:
+      type: Source
