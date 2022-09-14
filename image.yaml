@@ -1,0 +1,45 @@
+apiVersion: image.openshift.io/v1
+dockerImageManifestMediaType: application/vnd.oci.image.index.v1+json
+dockerImageMetadata:
+  ContainerConfig: {}
+  Created: null
+  Id: ""
+  apiVersion: image.openshift.io/1.0
+  kind: DockerImage
+dockerImageMetadataVersion: "1.0"
+dockerImageReference: quay.io/fmissi/ubuntu@sha256:f6deb88d3de9fbfa7ff78fa608b397cb940aa3daf4c822f354c0c55cd63f53ec
+dockerImageManifests:
+  - digest: "sha256:d92a6a26a4113c9066c4e477c1c0706e5f646a8a1ad13ab2050f8ec15f2f2f29"
+    mediaType: "application/vnd.oci.image.manifest.v1+json"
+    manifestSize: 406
+    architecture: "amd64"
+    os: "linux"
+  - digest: "sha256:bc9667ee9e8d4531caf84ba785c567af16f71dce373856aa995e0a525b4eac48"
+    mediaType: "application/vnd.oci.image.manifest.v1+json"
+    manifestSize: 406
+    architecture: "arm"
+    os: "linux"
+  - digest: "sha256:c311ef0c200dda635ea0e6a97c3ec648bed94265359fef0342eeaf87cc06167d"
+    mediaType: "application/vnd.oci.image.manifest.v1+json"
+    manifestSize: 406
+    architecture: "arm64"
+    os: "linux"
+    variant: "v8"
+  - digest: "sha256:5cae3af4c23ebaf8d0cede1fdc931a452c5360275476a277e22cec782416c81c"
+    mediaType: "application/vnd.oci.image.manifest.v1+json"
+    manifestSize: 406
+    architecture: "ppc64le"
+    os: "linux"
+  - digest: "sha256:7dfcb505b1199e4a4dd209ee47b57a94daed60c0cb7540e00a3ba23dab8cab67"
+    mediaType: "application/vnd.oci.image.manifest.v1+json"
+    manifestSize: 406
+    architecture: "riscv64"
+    os: "linux"
+  - digest: "sha256:7c6cf7440bd0f327af161c1892f2ecf248ec5d03857583b24b056de53750e3dd"
+    mediaType: "application/vnd.oci.image.manifest.v1+json"
+    manifestSize: 406
+    architecture: "s390x"
+    os: "linux"
+kind: Image
+metadata:
+  name: sha256:f6deb88d3de9fbfa7ff78fa608b397cb940aa3daf4c822f354c0c55cd63f53ec
